@@ -1,45 +1,328 @@
-body {
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background: #f1f1f1;
+  color: #222;
+  padding-bottom: 60px;
+}
+
+/* ===== TOP IMAGE ===== */
+.top-image {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
 }
 
 .main-img {
-  display: block;
-  width: 50vw;        /* 電腦：佔螢幕 50% 寬 */
-  max-width: 600px;   /* 不要大到太誇張 */
-  height: auto;       /* 保持比例 */
-  margin: 20px auto;  /* 置中 */
+  max-width: 90%;
+  max-height: 280px;
+  height: auto;
 }
 
-/* 手機 */
-@media (max-width: 768px) {
-  .main-img {
-    width: 100vw;     /* 手機：滿版 */
-    max-width: 100%;
-  }
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 30px 0;
-  width: 100%;
+/* ===== SUBMIT AREA ===== */
+#submit-area {
   text-align: center;
+  margin-bottom: 24px;
 }
 
-ul li {
-  margin: 15px 0;
+.submit-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
 }
 
-ul a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #0066cc;
+#username {
+  padding: 8px 10px;
+  font-size: 16px;
+  width: min(260px, 70vw);
 }
 
+#submitBtn {
+  padding: 8px 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#status {
+  margin-top: 8px;
+  min-height: 1.2em;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.content {
+  display: flex;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ===== PANELS ===== */
+.panel {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px;
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.06); */
+}
+
+.panel h3 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ===== RANK LIST ===== */
 #rank-list {
   list-style: none;
-  padding-left: 0;
+}
+
+#rank-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.winner {
+  font-weight: bold;
+  color: #d97706;
+}
+
+.rank-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  margin-right: 14px;
+  word-break: break-word;
+}
+
+.rank-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.rank-time {
+  white-space: nowrap;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ===== Message Board ===== */
+#messageInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+#messageList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.message-left {
+  flex: 1;
+  margin-right: 14px;
+  word-break: break-word;
+}
+
+.message-time {
+  white-space: nowrap;
+  font-size: 12px;
+  color: #999;
+}
+
+#messageStatus {
+  margin-top: 8px;
+  padding: 4px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background: #f1f1f1;
+  color: #222;
+  padding-bottom: 60px;
+}
+
+/* ===== TOP IMAGE ===== */
+.top-image {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.main-img {
+  max-width: 90%;
+  max-height: 280px;
+  height: auto;
+}
+
+/* ===== SUBMIT AREA ===== */
+#submit-area {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.submit-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+#username {
+  padding: 8px 10px;
+  font-size: 16px;
+  width: min(260px, 70vw);
+}
+
+#submitBtn {
+  padding: 8px 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#status {
+  margin-top: 8px;
+  min-height: 1.2em;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.content {
+  display: flex;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ===== PANELS ===== */
+.panel {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px;
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.06); */
+}
+
+.panel h3 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ===== RANK LIST ===== */
+#rank-list {
+  list-style: none;
+}
+
+#rank-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.winner {
+  font-weight: bold;
+  color: #d97706;
+}
+
+.rank-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  margin-right: 14px;
+  word-break: break-word;
+}
+
+.rank-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.rank-time {
+  white-space: nowrap;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ===== Message Board ===== */
+#messageInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+#messageList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.message-left {
+  flex: 1;
+  margin-right: 14px;
+  word-break: break-word;
+}
+
+.message-time {
+  white-space: nowrap;
+  font-size: 12px;
+  color: #999;
+}
+
+#messageStatus {
+  margin-top: 8px;
+  padding: 4px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
 }

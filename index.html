@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HappyNewYear_2026</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
 
-  <!-- 圖片 -->
-<img src="/you_find_it.PNG" alt="my picture" class="main-img">
+  <!-- ===== TOP IMAGE ===== -->
+  <header class="top-image">
+    <img src="/you_find_it.PNG" alt="Happy New Year" class="main-img">
+  </header>
 
-  <!-- 排行榜輸入區 -->
- <div id="submit-area">
-  <h2 style="text-align:center;">Enter your name</h2>
+  <!-- ===== SUBMIT AREA ===== -->
+  <section id="submit-area">
+    <h2>Enter your name</h2>
 
-  <div style="display:flex; justify-content:center; gap:8px; margin-bottom:16px;">
-    <input
-      id="username"
-      type="text"
-      placeholder="Your name"
-    >
-    <button id="submitBtn">Submit</button>
-  </div>
+    <div class="submit-row">
+      <input id="username" type="text" placeholder="Your name" />
+      <button id="submitBtn">Submit</button>
+    </div>
 
-  <p id="status" style="text-align:center;"></p>
-  </div>
+    <p id="status"></p>
+  </section>
 
-  <p id="full-msg" style="display:none; text-align:center; color:red;">
-    Top 10 is full.
-  </p>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="content">
 
-  <p id="status" style="text-align:center;"></p>
+    <!-- LEFT: RANKING -->
+    <section class="panel">
+      <h3>🏁 Top 10 Fastest</h3>
+      <ol id="rank-list"></ol>
+    </section>
 
-  <h3 style="text-align:center;">Top 10 Fastest</h3>
-  <ol id="rank-list" style="max-width:600px; margin: 0 auto 24px;"></ol>
+    <!-- RIGHT: MESSAGE BOARD -->
+    <section class="panel">
+      <h3>💬 Message Board</h3>
 
+      <textarea
+        id="messageInput"
+        rows="3"
+        placeholder="Leave a message (max 50 chars)"
+      ></textarea>
+
+      <button id="messageBtn">Send</button>
+      <p id="messageStatus"></p>
+
+      <ul id="messageList"></ul>
+    </section>
+
+  </main>
+
+  <!-- ===== JS ===== -->
   <script type="module" src="/src/main.js"></script>
-
 
 </body>
 </html>
