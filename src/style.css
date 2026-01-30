@@ -38,3 +38,8 @@ ul a {
   font-size: 18px;
   color: #0066cc;
 }
+
+#rank-list {
+  list-style: none;
+  padding-left: 0;
+}
