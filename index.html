@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HappyNewYear_2026</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
-  <script type="module" crossorigin src="/HappyNewYear_2026/assets/index-vr55Weer.js"></script>
-  <link rel="stylesheet" crossorigin href="/HappyNewYear_2026/assets/index-9QNvDZZO.css">
+
+  <link rel="stylesheet" href="/style.css" />
+  <script type="module" crossorigin src="/HappyNewYear_2026/assets/index-COoFowNH.js"></script>
+  <link rel="stylesheet" crossorigin href="/HappyNewYear_2026/assets/index-k3c3tspB.css">
 </head>
 
 <body>
 
-  <!-- 圖片 -->
-<img src="/HappyNewYear_2026/you_find_it.PNG" alt="my picture" class="main-img">
+  <!-- ===== TOP IMAGE ===== -->
+  <header class="top-image">
+    <img src="/HappyNewYear_2026/you_find_it.PNG" alt="Happy New Year" class="main-img">
+  </header>
 
-  <!-- 排行榜輸入區 -->
-  <h2 style="text-align:center;">Enter your name</h2>
+  <!-- ===== SUBMIT AREA ===== -->
+  <section id="submit-area">
+    <h2>Enter your name</h2>
 
-  <div style="display:flex; justify-content:center; gap:8px; margin-bottom:16px;">
-    <input
-      id="username"
-      type="text"
-      placeholder="Your name"
-      style="padding:10px; font-size:16px; width: min(280px, 70vw);"
-    >
-    <button
-      id="submitBtn"
-      style="padding:10px 14px; font-size:16px;"
-    >
-      Submit
-    </button>
-  </div>
+    <div class="submit-row">
+      <input id="username" type="text" placeholder="Your name" />
+      <button id="submitBtn">Submit</button>
+    </div>
 
-  <p id="status" style="text-align:center;"></p>
+    <p id="status"></p>
+  </section>
 
-  <h3 style="text-align:center;">Top 10 Fastest</h3>
-  <ol id="rank-list" style="max-width:600px; margin: 0 auto 24px;"></ol>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="content">
 
-  <!-- 原本的 links -->
-  <ul>
-    <li>
-      <a href="https://twtks.bz/t/RRdqmnNeSH" target="_blank">
-        Your reward - Starbucks - No.1
-      </a>
-    </li>
-    <li>
-      <a href="https://twtks.bz/t/5WDTiJgdWh" target="_blank">
-        Your reward - Starbucks - No.2
-      </a>
-    </li>
-    <li>
-      <a href="https://twtks.bz/t/fWNblH84uk" target="_blank">
-        Your reward - Starbucks - No.3
-      </a>
-    </li>
-  </ul>
+    <!-- LEFT: RANKING -->
+    <section class="panel">
+      <h3>🏁 Top 10 Fastest</h3>
+      <ol id="rank-list"></ol>
+    </section>
 
+    <!-- RIGHT: MESSAGE BOARD -->
+    <section class="panel">
+      <h3>💬 Message Board</h3>
 
+      <textarea
+        id="messageInput"
+        rows="3"
+        placeholder="Leave a message (max 50 chars)"
+      ></textarea>
+
+      <button id="messageBtn">Send</button>
+      <p id="messageStatus"></p>
+
+      <ul id="messageList"></ul>
+    </section>
+
+  </main>
+
+  <!-- ===== JS ===== -->
 
 </body>
 </html>
